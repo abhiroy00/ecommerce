@@ -22,9 +22,9 @@ export default function Navbar() {
             )
           }
           {
-            isAuthenticated ? <li><button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Log Out </button></li>
+            isAuthenticated ? <li><button style={{backgroundColor:"#E63946",  height:"30px",width:"80px", borderRadius:"5px"}} onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Log Out </button></li>
             : 
-            <li><button onClick={() => loginWithRedirect()}>Log In</button></li>
+            <li><button style={{backgroundColor:"#E63946",  height:"30px",width:"80px", borderRadius:"5px"}} onClick={() => loginWithRedirect()}>Log In</button></li>
           }
           
           
