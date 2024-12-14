@@ -5,7 +5,7 @@ import { faLock, faMoneyBill, faRotateLeft, faStar, faTruck } from '@fortawesome
 const Infopage = () => {
   return (
     <div className='m-0 p-0'>
-      <div className='block lg:flex min-h-screen min-w-screen'>
+      <div className='block lg:flex min-w-screen'>
         <div className='w-1/2' >
           <img src="" alt="Product img" className='m-24 w-5/3 h-auto' />
         </div>
