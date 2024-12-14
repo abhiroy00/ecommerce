@@ -24,8 +24,8 @@ export default function Footer() {
         <div className='mb-10'>
           <h4 className='text-[2vh] lg:text-3xl text-white text-center'>Make Money with Us</h4>
           <ul className='flex justify-center flex-col mt-5 items-center'>
-            <li className=' text-[1vh] lg:text-2xl  text-zinc-400'>Sell on Amazon</li>
-            <li className=' text-[1vh] lg:text-2xl text-zinc-400'>supply to Amazon</li>
+            <li className=' text-[1vh] lg:text-2xl  text-zinc-400'>Sell on QuickBuy</li>
+            <li className=' text-[1vh] lg:text-2xl text-zinc-400'>supply to QuickBuy</li>
             <li className=' text-[1vh] lg:text-2xl text-zinc-400'>Become an Affiliate</li>
             <li className=' text-[1vh] lg:text-2xl text-zinc-400'>Advertise Your Products</li>
           </ul>

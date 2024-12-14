@@ -15,7 +15,7 @@ export default function Home() {
             Discover top groceries , beauty, Fragrances,<br />
             and Furniture items from Amaron.Enjoy great <br />deals and excellent service, all in one place.<br /> Simplify your shopping
             experience with us.</p>
-          <button className='bg-red-600 w-auto p-1 mt-5 h-auto text-white  '>Shop Now</button>
+          <button className='bg-red-600 w-auto p-1 mt-5 h-auto text-white text-[2vw] rounded-md'>Shop Now</button>
         </div>
         <div className='w-1/2'>
         <img className='w-100% h-auto  pt-[10%] pl-10%' src={Images} />
