@@ -6,21 +6,21 @@ const Infopage = () => {
   return (
     <div className='m-0 p-0'>
       <div className='block lg:flex min-w-screen'>
-        <div className='w-1/2' >
+        <div className='w-full lg:w-1/2' >
           <img src="" alt="Product img" className='m-24 w-5/3 h-auto' />
         </div>
-        <div className='text-left w-1/2 m-10 p-10'>
+        <div className='text-left w-full lg:w-1/2 m-10 p-10'>
           <h1 className='text-2xl font-bold mb-4'>Product Title</h1>
           <p className='mb-2'>Product description (Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque saepe fugit vero nemo iste labore laboriosam repellendus quidem, deserunt suscipit ullam, eius corporis reiciendis praesentium eveniet et consequuntur cupiditate at.)</p>
           <p className='mb-2'>Product Ratings</p>
           <p className='mb-2'>Product Category</p>
           <span className='text-2xl'><p className=' inline text-red-600'>-(productdiscount)%</p><p className='inline text-black'>$(Product price)</p></span>
           <p className='mb-10'>Product MRP <br /> Inclusive of all taxes</p>
-          <span>
-            <p className='inline m-5  '> <FontAwesomeIcon className='text-xl relative bottom-5 left-14' icon={faTruck} />Free Delivery</p>
-            <p className='inline m-5  '> <FontAwesomeIcon className='text-xl relative bottom-5 left-16' icon={faMoneyBill} />Cash On Delivery</p>
-            <p className='inline m-5  '> <FontAwesomeIcon className='text-xl relative bottom-5 left-24' icon={faRotateLeft} />7 days Return & Exchange</p>
-            <p className='inline m-5  '> <FontAwesomeIcon className='text-xl relative bottom-5 left-16' icon={faLock} />Secure Transaction</p>
+          <span className='flex justify-around min-w-96'>
+            <p className='inline'> <FontAwesomeIcon className='text-xl relative bottom-5 left-14' icon={faTruck} />Free Delivery</p>
+            <p className='inline'> <FontAwesomeIcon className='text-xl relative bottom-5 left-16' icon={faMoneyBill} />Cash On Delivery</p>
+            <p className='inline'> <FontAwesomeIcon className='text-xl relative bottom-5 left-24' icon={faRotateLeft} />7 days Return & Exchange</p>
+            <p className='inline'> <FontAwesomeIcon className='text-xl relative bottom-5 left-16' icon={faLock} />Secure Transaction</p>
           </span>
           <p className='mb-2'>Product warranty</p>
           <p className='mb-2'>Shipping Information</p>
@@ -69,4 +69,4 @@ const Infopage = () => {
   )
 }
 
-        export default Infopage
+export default Infopage
