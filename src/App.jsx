@@ -1,16 +1,13 @@
-
+import Navbar from './Common/Navbar'
 import './App.css'
-
+import Home from './Common/Home'
 function App() {
  
 
   return (
     <>
-      <h1>hii this is ecommerce website</h1>
-      <h2>hello how are you ?</h2>
-      <h2>my name is Pritam mann</h2>
-      <h1>hii i am Ashish </h1>
-      <h2>hi i am deepanshu</h2>
+   <Navbar/>
+   <Home/>
     </>
   )
 }
