@@ -1,6 +1,4 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLock, faMoneyBill, faRotateLeft, faStar, faTruck } from '@fortawesome/free-solid-svg-icons'
 
 const Infopage = () => {
   return (
@@ -16,12 +14,6 @@ const Infopage = () => {
           <p className='mb-2'>Product Category</p>
           <span className='text-2xl'><p className=' inline text-red-600'>-(productdiscount)%</p><p className='inline text-black'>$(Product price)</p></span>
           <p className='mb-10'>Product MRP <br /> Inclusive of all taxes</p>
-          <span className='flex justify-around min-w-96'>
-            <p className='inline'> <FontAwesomeIcon className='text-xl relative bottom-5 left-14' icon={faTruck} />Free Delivery</p>
-            <p className='inline'> <FontAwesomeIcon className='text-xl relative bottom-5 left-16' icon={faMoneyBill} />Cash On Delivery</p>
-            <p className='inline'> <FontAwesomeIcon className='text-xl relative bottom-5 left-24' icon={faRotateLeft} />7 days Return & Exchange</p>
-            <p className='inline'> <FontAwesomeIcon className='text-xl relative bottom-5 left-16' icon={faLock} />Secure Transaction</p>
-          </span>
           <p className='mb-2'>Product warranty</p>
           <p className='mb-2'>Shipping Information</p>
           <p className='mb-2'>availability status</p>
@@ -54,11 +46,7 @@ const Infopage = () => {
               </div>
               <div className="flex items-center mb-4">
                 <span>
-                  <FontAwesomeIcon icon={faStar} className='text-yellow-300'/>
-                  <FontAwesomeIcon icon={faStar} className='text-yellow-300'/>
-                  <FontAwesomeIcon icon={faStar} className='text-yellow-300'/>
-                  <FontAwesomeIcon icon={faStar} className='text-yellow-300'/>
-                  <FontAwesomeIcon icon={faStar} className='text-yellow-300'/>
+                 Ratings
                 </span>
               </div>
             </div>
