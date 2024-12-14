@@ -3,6 +3,7 @@ import Images from '../assets/Images.png'
 import { PiTruck } from "react-icons/pi";
 import { MdAttachMoney } from "react-icons/md";
 import { RiSecurePaymentLine } from "react-icons/ri";
+import Footer from './Footer'
 export default function Home() {
   return (
     <div className='white w-screen h-screen'>
@@ -39,6 +40,8 @@ export default function Home() {
     </div>
     </div>
     </div>
+    <Footer/>
     </div>
+    
   )
 }

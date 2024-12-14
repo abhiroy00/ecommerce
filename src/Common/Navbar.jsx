@@ -1,4 +1,4 @@
-import React from 'react'
+import React  from 'react'
 import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Navbar() {
@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <div  >
         <div className='bg-black w-screen h-[70px] flex justify-between  '>
-          <h1 className='ml-28 text-4xl text-white mt-3'>QuickBuy</h1>
+          <h1 className='ml-28 text-4xl text-white mt-3'>Quick<span className='text-yellow-400'>Buy</span></h1>
         <ul className='flex text-white mr-28 mt-5 gap-8 text-xl'>
           <li>Home</li>
           <li>Products</li>
