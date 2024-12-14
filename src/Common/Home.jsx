@@ -7,7 +7,6 @@ export default function Home() {
       <div className='pt-40 pl-[140px] '>
         <h1 className='text-red-600 text-7xl'>Sale 20% Off</h1>
         <h1 className='text-black text-7xl'>On Everthing</h1>
-        <h1>Sorry ashish bhai</h1>
         <p className='text-2xl text-gray-900  pt-4 text-start'>
           Discover top groceries , beauty, Fragrances,<br />
           and Furniture items from Amaron.Enjoy great <br />deals and excellent service, all in one place.<br/> Simplify your shopping
