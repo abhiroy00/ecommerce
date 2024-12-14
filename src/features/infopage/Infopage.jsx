@@ -1,4 +1,8 @@
 import React from 'react'
+import { PiTruck } from "react-icons/pi";
+import { MdAttachMoney } from "react-icons/md";
+import { RiSecurePaymentLine } from "react-icons/ri";
+import { BsStarFill } from 'react-icons/bs';
 
 const Infopage = () => {
   return (
@@ -13,7 +17,12 @@ const Infopage = () => {
           <p className='mb-2'>Product Ratings</p>
           <p className='mb-2'>Product Category</p>
           <span className='text-2xl'><p className=' inline text-red-600'>-(productdiscount)%</p><p className='inline text-black'>$(Product price)</p></span>
-          <p className='mb-10'>Product MRP <br /> Inclusive of all taxes</p>
+          <p className='mb-4'>Product MRP <br /> Inclusive of all taxes</p>
+          <div className='flex justify-around mb-4'>
+            <div><PiTruck size={40} className='ml-9'/>Cash On Delivery</div>
+            <div><MdAttachMoney size={40} className='ml-20'/>30 day return & replacement</div>
+            <div><RiSecurePaymentLine size={40} className='ml-10'/>Secure Payments</div>
+          </div>
           <p className='mb-2'>Product warranty</p>
           <p className='mb-2'>Shipping Information</p>
           <p className='mb-2'>availability status</p>
@@ -46,7 +55,11 @@ const Infopage = () => {
               </div>
               <div className="flex items-center mb-4">
                 <span>
-                 Ratings
+                 <BsStarFill className='text-yellow-300 inline' />
+                 <BsStarFill className='text-yellow-300 inline' />
+                 <BsStarFill className='text-yellow-300 inline' />
+                 <BsStarFill className='text-yellow-300 inline' />
+                 <BsStarFill className='text-yellow-300 inline' />
                 </span>
               </div>
             </div>
