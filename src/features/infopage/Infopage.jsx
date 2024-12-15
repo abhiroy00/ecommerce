@@ -32,10 +32,10 @@ const Infopage = () => {
             </label>
             <input type="number" id="quantity" min="1" defaultValue={1} className="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
           </div>
-          <button className=" bg-violet-700 text-white px-6 py-3 rounded-lg mr-10 hover:bg-violet-500 transition duration-300">
+          <button className=" bg-amber-400 text-black px-6 py-3 rounded-lg mr-10 hover:bg-amber-500 transition duration-300">
             Buy Now
           </button>
-          <button className=" bg-violet-700 text-white px-6 py-3 rounded-lg mr-10 hover:bg-violet-500 transition duration-300">
+          <button className=" bg-amber-400 text-black px-6 py-3 rounded-lg mr-10 hover:bg-amber-500 transition duration-300">
             Add To Cart
           </button>
         </div>

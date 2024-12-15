@@ -10,11 +10,11 @@ export default function Navbar() {
         <div className='bg-black w-screen h-[70px] flex justify-between  '>
           <h1 className='ml-28 text-4xl text-white mt-3'>Quick<span className='text-yellow-400'>Buy</span></h1>
         <ul className='flex text-white mr-28 mt-5 gap-8 text-xl'>
-          <NavLink to={"/"}><li>Home</li></NavLink>
-          <NavLink to={"/Product"}><li>Products</li></NavLink>
-          <NavLink to={"/category"}><li>Category</li></NavLink>
-          <NavLink to={"/About"}><li>About Us</li></NavLink>
-          <NavLink to={"/Contact"}><li>Contact Us</li></NavLink>
+          <NavLink to={"/"} className={({ isActive }) => isActive ? "text-yellow-400" : "text-white"}><li>Home</li></NavLink>
+          <NavLink to={"/Product"} className={({ isActive }) => isActive ? "text-yellow-400" : "text-white"}><li>Products</li></NavLink>
+          <NavLink to={"/category"} className={({ isActive }) => isActive ? "text-yellow-400" : "text-white"}><li>Category</li></NavLink>
+          <NavLink to={"/About"} className={({ isActive }) => isActive ? "text-yellow-400" : "text-white"}><li>About Us</li></NavLink>
+          <NavLink to={"/Contact"} className={({ isActive }) => isActive ? "text-yellow-400" : "text-white"}><li>Contact Us</li></NavLink>
           {
             isAuthenticated && (
               <li>

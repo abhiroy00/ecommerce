@@ -9,13 +9,13 @@ export default function Home() {
     <div className='white w-screen h-auto'>
       <div className='flex justify-around'>
         <div className='p-[10%] w-1/2 '>
-          <h1 className='text-red-600 text-[5vw]'>Sale 20% Off</h1>
+          <h1 className='text-amber-600 text-[5vw]'>Sale 20% Off</h1>
           <h1 className='text-black text-[5vw]'>On Everthing</h1>
           <p className='text-[2vw] text-gray-900  pt-4 text-start'>
             Discover top groceries , beauty, Fragrances,<br />
             and Furniture items from Amaron.Enjoy great <br />deals and excellent service, all in one place.<br /> Simplify your shopping
             experience with us.</p>
-          <button className='bg-red-600 w-auto p-1 mt-5 h-auto text-white text-[2vw] rounded-md'>Shop Now</button>
+          <button className='bg-amber-600 w-auto p-1 mt-5 h-auto text-white text-[2vw] rounded-md'>Shop Now</button>
         </div>
         <div className='w-1/2'>
           <img className='w-100% h-auto  pt-[10%] pl-10%' src={Images} />
