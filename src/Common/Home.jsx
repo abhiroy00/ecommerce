@@ -6,7 +6,7 @@ import { RiSecurePaymentLine } from "react-icons/ri";
 import Footer from './Footer'
 export default function Home() {
   return (
-    <div className='white w-screen h-screen'>
+    <div className='white w-screen h-auto'>
       <div className='flex justify-around'>
         <div className='p-[10%] w-1/2 '>
           <h1 className='text-red-600 text-[5vw]'>Sale 20% Off</h1>
@@ -18,7 +18,7 @@ export default function Home() {
           <button className='bg-red-600 w-auto p-1 mt-5 h-auto text-white text-[2vw] rounded-md'>Shop Now</button>
         </div>
         <div className='w-1/2'>
-        <img className='w-100% h-auto  pt-[10%] pl-10%' src={Images} />
+          <img className='w-100% h-auto  pt-[10%] pl-10%' src={Images} />
         </div>
       </div>
       <div >
@@ -42,7 +42,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
 
   )

@@ -4,7 +4,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa6";
 export default function Footer() {
   return (
-    <div className='bg-black h-auto'>
+    <div className='bg-black h-auto '>
         <div className='text-center'>
           <h1 className='text-[4vh] lg:text-5xl text-amber-600 mb-5 '><span className="text-amber-400">Quick</span>Buy</h1>
         </div>
