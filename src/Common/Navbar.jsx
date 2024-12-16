@@ -1,6 +1,7 @@
 import React  from 'react'
 import { useAuth0 } from "@auth0/auth0-react";
 import { NavLink } from 'react-router-dom';
+import { FaUserCircle } from "react-icons/fa";
 
 export default function Navbar() {
   const { loginWithRedirect , isAuthenticated , user} = useAuth0();
@@ -18,7 +19,7 @@ export default function Navbar() {
           {
             isAuthenticated && (
               <li>
-                <p>{user.name}</p>
+                <p style={{color: "#FFD700", fontSize: "18px", fontWeight: "600",position:"relative",bottom:"4px", backgroundColor: "rgba(255, 255, 255, 0.1)",borderRadius: "8px",padding: "5px 15px", margin: "0", display: "flex", alignItems: "center", gap: "8px", border: "1px solid #FFD700",}}><FaUserCircle size={22} color="#FFD700" />{user.name}</p>
               </li>
             )
           }
