@@ -31,8 +31,8 @@ function App() {
           element: <Contact/>
         },
         {
-          path: "/infopage",
-          element: <Infopage/>
+          path: "/infopage/:id", 
+          element: <Infopage />
         },
         {
           path: "/About",
