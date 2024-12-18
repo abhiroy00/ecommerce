@@ -1,4 +1,8 @@
 import React from 'react'
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -12,6 +16,7 @@ export default function Home() {
 
         <button  style={{height:"60px",width:"150px",color:"white",background:"linear-gradient(to top,indigo,purple)",fontWeight:"bold",position:"absolute",top:"660px",left:"25px",borderRadius:"20px"}}>Shop Now!</button>
       </div>
+
     </div>
   )
 }

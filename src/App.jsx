@@ -15,7 +15,7 @@ function App() {
       element: <>
         <Navbar />
         <Outlet />
-        <Footer />
+        <Footer/>
       </>,
       children: [
         {
