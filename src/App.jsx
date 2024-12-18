@@ -1,7 +1,7 @@
 import Navbar from './Common/Navbar'
 import './App.css'
 import Home from './Common/Home'
-import Infopage from './features/infopage/infopage'
+import Infopage from './features/infopage/Infopage'
 import Contact from './features/Contact us/Contact'
 import Footer from './Common/Footer'
 import Product from './features/products/Product'
