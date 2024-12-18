@@ -3,7 +3,6 @@ import Images from '../assets/Images.png'
 import { PiTruck } from "react-icons/pi";
 import { MdAttachMoney } from "react-icons/md";
 import { RiSecurePaymentLine } from "react-icons/ri";
-import Footer from './Footer'
 export default function Home() {
   return (
     <div className='white w-screen h-auto'>
@@ -23,7 +22,6 @@ export default function Home() {
       </div>
       <div >
         <h1 className=' text-[5vw] text-black flex justify-center mt-10 font-bold'>Why Shop With Us</h1>
-
         <div className='flex gap-5 mt-8  justify-around pb-20 '>
           <div className='bg-sky-950 w-[30vw] min-w-28 max-w-60 h-auto rounded-md p-2 flex flex-col text-white justify-center items-center'>
             <PiTruck className=' text-white text-[5vh]' />
@@ -43,6 +41,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-
   )
 }
