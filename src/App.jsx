@@ -35,7 +35,7 @@ function App() {
           element: <Infopage />
         },
         {
-          path: "/AboutUs",
+          path: "/About",
           element: <AboutUs/>
         },
        
