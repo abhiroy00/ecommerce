@@ -6,7 +6,7 @@ import Contact from './features/Contact us/Contact'
 import Product from './features/products/Product'
 import Footer from './Common/Footer'
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
-import About from './features/About/About'
+import AboutUs from './features/About/AboutUs'
 import Category from './features/Category/category'
 import Cart from './features/carts/Cart'
 function App() {
@@ -38,7 +38,7 @@ function App() {
         },
         {
           path: "/About",
-          element: <About/>
+          element: <AboutUs/>
         },
        
         {
@@ -50,6 +50,7 @@ function App() {
           element: <Cart/>
         },
        
+        
 
     
       ]
