@@ -5,12 +5,13 @@ import { RiSecurePaymentLine } from "react-icons/ri";
 import { BsStarFill } from 'react-icons/bs';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Infopage = () => {
   const { id } = useParams();
   const [productinfo, setproductinfo] = useState(null);
   
-  console.log("URL id:", id); // Check id from URL
+  console.log("URL id:", id); 
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -18,10 +19,10 @@ const Infopage = () => {
         const res = await axios.get("http://localhost:3000/product");
         const data = res.data;
         
-        console.log("Axios Response:", data); // Log the response from the backend
+        console.log("Axios Response:", data); 
 
         const selectedProduct = data.find((product) => product.id === id);
-        console.log("Selected Product:", selectedProduct); // Check if product is found
+        console.log("Selected Product:", selectedProduct); 
 
         if (selectedProduct) {
           setproductinfo(selectedProduct);
@@ -38,7 +39,7 @@ const Infopage = () => {
   if (!productinfo) {
     return <div>Loading or Product not found...</div>;
   }
-
+  const mrp = parseInt((productinfo.price)/(1-(productinfo.discount/100)))
   return (
     <div className='m-0 p-0'>
       <div className='block lg:flex min-w-screen'>
@@ -54,7 +55,7 @@ const Infopage = () => {
             <p className='inline text-red-600'>-{productinfo.discount}%</p>
             <p className='inline text-black'>${productinfo.price}</p>
           </span>
-          <p className='mb-4'>Product MRP <br /> Inclusive of all taxes</p>
+          <p className='mb-4'>MRP ${mrp}<br /> Inclusive of all taxes</p>
           <div className='flex justify-around mb-4'>
             <div><PiTruck size={40} className='ml-9' />Cash On Delivery</div>
             <div><MdAttachMoney size={40} className='ml-20' />30 day return & replacement</div>
@@ -72,9 +73,11 @@ const Infopage = () => {
           <button className="bg-amber-400 text-black px-6 py-3 rounded-lg mr-10 hover:bg-amber-500 transition duration-300">
             Buy Now
           </button>
+          <Link to={`/cart/${productinfo.id}`}> 
           <button className="bg-amber-400 text-black px-6 py-3 rounded-lg mr-10 hover:bg-amber-500 transition duration-300">
             Add To Cart
           </button>
+          </Link>
         </div>
       </div>
       <div className="py-8">

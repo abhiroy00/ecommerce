@@ -46,7 +46,7 @@ function App() {
           element: <Category/>
         },
         {
-          path: "/cart",
+          path: "/cart/:id",
           element: <Cart/>
         },
        
