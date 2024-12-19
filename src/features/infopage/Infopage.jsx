@@ -1,27 +1,47 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { PiTruck } from "react-icons/pi";
 import { MdAttachMoney } from "react-icons/md";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import { BsStarFill } from 'react-icons/bs';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
 const Infopage = () => {
+  const { id } = useParams()
+  const [productinfo, setproductinfo] = useState(null)
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const res = await axios.get("http://localhost:3000/product");
+        const data = res.data;
+        const selectedProduct = data.find((product) => product.id === parseInt(id, 10));
+        setproductinfo(selectedProduct);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchProduct();
+  }, [id]);
+  if (!productinfo) { 
+    return <div>Loading...</div>; 
+  }
   return (
     <div className='m-0 p-0'>
       <div className='block lg:flex min-w-screen'>
         <div className='w-full lg:w-1/2' >
-          <img src="" alt="Product img" className='m-24 w-5/3 h-auto' />
+          <img src={productinfo.image} alt="Product img" className='m-24 w-[60%] h-auto' />
         </div>
         <div className='text-left w-full lg:w-1/2 m-10 p-10'>
-          <h1 className='text-2xl font-bold mb-4'>Product Title</h1>
-          <p className='mb-2'>Product description (Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque saepe fugit vero nemo iste labore laboriosam repellendus quidem, deserunt suscipit ullam, eius corporis reiciendis praesentium eveniet et consequuntur cupiditate at.)</p>
-          <p className='mb-2'>Product Ratings</p>
-          <p className='mb-2'>Product Category</p>
-          <span className='text-2xl'><p className=' inline text-red-600'>-(productdiscount)%</p><p className='inline text-black'>$(Product price)</p></span>
+          <h1 className='text-2xl font-bold mb-4'>{productinfo.title}</h1>
+          <p className='mb-2'>{productinfo.description}</p>
+          <p className='mb-2'>Ratings</p>
+          <p className='mb-2'>{productinfo.category}</p>
+          <span className='text-2xl'><p className=' inline text-red-600'>-{productinfo.discount}%</p><p className='inline text-black'>${productinfo.price}</p></span>
           <p className='mb-4'>Product MRP <br /> Inclusive of all taxes</p>
           <div className='flex justify-around mb-4'>
-            <div><PiTruck size={40} className='ml-9'/>Cash On Delivery</div>
-            <div><MdAttachMoney size={40} className='ml-20'/>30 day return & replacement</div>
-            <div><RiSecurePaymentLine size={40} className='ml-10'/>Secure Payments</div>
+            <div><PiTruck size={40} className='ml-9' />Cash On Delivery</div>
+            <div><MdAttachMoney size={40} className='ml-20' />30 day return & replacement</div>
+            <div><RiSecurePaymentLine size={40} className='ml-10' />Secure Payments</div>
           </div>
           <p className='mb-2'>Product warranty</p>
           <p className='mb-2'>Shipping Information</p>
@@ -55,18 +75,18 @@ const Infopage = () => {
               </div>
               <div className="flex items-center mb-4">
                 <span>
-                 <BsStarFill className='text-yellow-300 inline' />
-                 <BsStarFill className='text-yellow-300 inline' />
-                 <BsStarFill className='text-yellow-300 inline' />
-                 <BsStarFill className='text-yellow-300 inline' />
-                 <BsStarFill className='text-yellow-300 inline' />
+                  <BsStarFill className='text-yellow-300 inline' />
+                  <BsStarFill className='text-yellow-300 inline' />
+                  <BsStarFill className='text-yellow-300 inline' />
+                  <BsStarFill className='text-yellow-300 inline' />
+                  <BsStarFill className='text-yellow-300 inline' />
                 </span>
               </div>
             </div>
           </div>
         </div>
       </div>
-  </div>
+    </div>
   )
 }
 

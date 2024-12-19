@@ -1,45 +1,21 @@
 import React from 'react'
-import Images from '../assets/Images.png'
-import { PiTruck } from "react-icons/pi";
-import { MdAttachMoney } from "react-icons/md";
-import { RiSecurePaymentLine } from "react-icons/ri";
+import { Link } from 'react-router-dom'
+
 export default function Home() {
   return (
-    <div className='white w-screen h-auto'>
-      <div className='flex justify-around'>
-        <div className='p-[10%] w-1/2 '>
-          <h1 className='text-amber-600 text-[5vw]'>Sale 20% Off</h1>
-          <h1 className='text-black text-[5vw]'>On Everthing</h1>
-          <p className='text-[2vw] text-gray-900  pt-4 text-start'>
-            Discover top groceries , beauty, Fragrances,
-            and Furniture items from Amaron.Enjoy great deals and excellent service, all in one place. Simplify your shopping
-            experience with us.</p>
-          <button className='bg-amber-600 w-auto p-1 mt-5 h-auto text-white text-[2vw] rounded-md'>Shop Now</button>
-        </div>
-        <div className='w-1/2'>
-          <img className='w-100% h-auto  pt-[20%] pl-[10%]' src={Images} />
-        </div>
+    <div>
+      <div style={{height:"100vh",width:"100wh",backgroundColor:"white"}}>
+        <h1  className='animate-pulse' style={{position:"absolute",top:"210px",fontSize:"40px",color:"purple",left:"25px"}}>Welcome!</h1>
+        <h1 style={{position:"absolute",top:"285px",fontSize:"50px",color:"indigo",fontFamily:"sans-serif",left:"25px"}}>Your One-Stop Shop for Everything</h1>
+        <p style={{position:"absolute",top:"370px",fontSize:"25px",color:"magenta",fontFamily:"cursive",left:"25px",marginRight:"800px"}}>Welcome to QuickBuy, your one-stop destination for all your shopping needs! From the latest trends in fashion to must-have gadgets, home essentials, and more, we bring a world of quality products right to your fingertips. Enjoy seamless navigation, secure payments, and fast delivery, all designed to make your shopping experience effortless and enjoyable. </p>
+
+        <div style={{height:"500px",width:"500px",animation:"changecolor 50s infinite",position:"absolute",top:"210px",left:"900px",backgroundPosition:"center",backgroundRepeat:"no-repeat",backgroundSize:"cover",justifyContent:"center"}}></div>
+
+        <Link to='/Product'><button  style={{height:"60px",width:"150px",color:"white",background:"linear-gradient(to top,indigo,purple)",fontWeight:"bold",position:"absolute",top:"660px",left:"25px",borderRadius:"20px"}}>Shop Now!</button></Link>
+
+        
       </div>
-      <div >
-        <h1 className=' text-[5vw] text-black flex justify-center mt-10 font-bold'>Why Shop With Us</h1>
-        <div className='flex gap-5 mt-8  justify-around pb-20 '>
-          <div className='bg-sky-950 w-[30vw] min-w-28 max-w-60 h-auto rounded-md p-2 flex flex-col text-white justify-center items-center'>
-            <PiTruck className=' text-white text-[5vh]' />
-            <h1 className="mt-4 text-center text-white font-bold">Super Fast and Free Delivery</h1>
-            <p className='mt-1 text-center text-white '>Enjoy free and fast delivery on all your favorite products!</p>
-          </div>
-          <div className='bg-sky-950 w-[30vw] min-w-28 max-w-60 h-auto rounded-md p-2 flex flex-col text-white justify-center items-center'>
-            < MdAttachMoney className=' text-white text-[5vh]' />
-            <h1 className="mt-4 text-center font-bold text-white ">Money-back Guaranteed</h1>
-            <p className='mt-1 text-center text-white '>30-day money-back guarantee.</p>
-          </div>
-          <div className='bg-sky-950 w-[30vw] min-w-28 max-w-60 h-auto rounded-md p-2 flex flex-col text-white justify-center items-center'>
-            <RiSecurePaymentLine className=' text-white text-[5vh]' />
-            <h1 className="mt-4 text-center font-bold text-white ">Super Secure Payment System</h1>
-            <p className='mt-1 ml-1 text-center text-white'>Enjoy secure payments every time you shop with us.</p>
-          </div>
-        </div>
-      </div>
+
     </div>
   )
 }
