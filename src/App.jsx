@@ -6,7 +6,7 @@ import Contact from './features/Contact us/Contact'
 import Product from './features/products/Product'
 import Footer from './Common/Footer'
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
-import About from './features/About/About'
+import AboutUs from './features/About/AboutUs'
 import Category from './features/Category/category'
 function App() {
   const router = createBrowserRouter([
@@ -35,14 +35,15 @@ function App() {
           element: <Infopage />
         },
         {
-          path: "/About",
-          element: <About/>
+          path: "/AboutUs",
+          element: <AboutUs/>
         },
        
         {
           path: "/category",
           element: <Category/>
         },
+        
 
     
       ]
