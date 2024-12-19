@@ -7,28 +7,42 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 const Infopage = () => {
-  const { id } = useParams()
-  const [productinfo, setproductinfo] = useState(null)
+  const { id } = useParams();
+  const [productinfo, setproductinfo] = useState(null);
+  
+  console.log("URL id:", id); // Check id from URL
+
   useEffect(() => {
     const fetchProduct = async () => {
       try {
         const res = await axios.get("http://localhost:3000/product");
         const data = res.data;
-        const selectedProduct = data.find((product) => product.id === parseInt(id ,10));
-        setproductinfo(selectedProduct);
+        
+        console.log("Axios Response:", data); // Log the response from the backend
+
+        const selectedProduct = data.find((product) => product.id === id);
+        console.log("Selected Product:", selectedProduct); // Check if product is found
+
+        if (selectedProduct) {
+          setproductinfo(selectedProduct);
+        } else {
+          console.error("Product not found");
+        }
       } catch (err) {
-        console.log(err);
+        console.log("Error fetching product:", err);
       }
     };
     fetchProduct();
   }, [id]);
-  if (!productinfo) { 
-    return <div>Loading...</div>; 
+
+  if (!productinfo) {
+    return <div>Loading or Product not found...</div>;
   }
+
   return (
     <div className='m-0 p-0'>
       <div className='block lg:flex min-w-screen'>
-        <div className='w-full lg:w-1/2' >
+        <div className='w-full lg:w-1/2'>
           <img src={productinfo.image} alt="Product img" className='m-24 w-[60%] h-auto' />
         </div>
         <div className='text-left w-full lg:w-1/2 m-10 p-10'>
@@ -36,7 +50,10 @@ const Infopage = () => {
           <p className='mb-2'>{productinfo.description}</p>
           <p className='mb-2'>Ratings</p>
           <p className='mb-2'>{productinfo.category}</p>
-          <span className='text-2xl'><p className=' inline text-red-600'>-{productinfo.discount}%</p><p className='inline text-black'>${productinfo.price}</p></span>
+          <span className='text-2xl'>
+            <p className='inline text-red-600'>-{productinfo.discount}%</p>
+            <p className='inline text-black'>${productinfo.price}</p>
+          </span>
           <p className='mb-4'>Product MRP <br /> Inclusive of all taxes</p>
           <div className='flex justify-around mb-4'>
             <div><PiTruck size={40} className='ml-9' />Cash On Delivery</div>
@@ -52,10 +69,10 @@ const Infopage = () => {
             </label>
             <input type="number" id="quantity" min="1" defaultValue={1} className="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
           </div>
-          <button className=" bg-amber-400 text-black px-6 py-3 rounded-lg mr-10 hover:bg-amber-500 transition duration-300">
+          <button className="bg-amber-400 text-black px-6 py-3 rounded-lg mr-10 hover:bg-amber-500 transition duration-300">
             Buy Now
           </button>
-          <button className=" bg-amber-400 text-black px-6 py-3 rounded-lg mr-10 hover:bg-amber-500 transition duration-300">
+          <button className="bg-amber-400 text-black px-6 py-3 rounded-lg mr-10 hover:bg-amber-500 transition duration-300">
             Add To Cart
           </button>
         </div>
@@ -66,7 +83,6 @@ const Infopage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="flex items-center mb-4">
-
                 <div> <h3 className="text-lg font-semibold">reviewerName</h3>
                   <p className="text-gray-600">reviewerEmail</p>
                   <p className="text-gray-600">comment</p>
@@ -87,7 +103,7 @@ const Infopage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Infopage
+export default Infopage;
