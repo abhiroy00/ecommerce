@@ -14,7 +14,7 @@ const Infopage = () => {
       try {
         const res = await axios.get("http://localhost:3000/product");
         const data = res.data;
-        const selectedProduct = data.find((product) => product.id === parseInt(id, 10));
+        const selectedProduct = data.find((product) => product.id === parseInt(id ,10));
         setproductinfo(selectedProduct);
       } catch (err) {
         console.log(err);
