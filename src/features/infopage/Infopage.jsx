@@ -46,7 +46,7 @@ const Infopage = () => {
         <div className='w-full lg:w-1/2'>
           <img src={productinfo.image} alt="Product img" className='m-24 w-[60%] h-auto' />
         </div>
-        <div className='text-left w-full lg:w-1/2 m-10 p-10'>
+        <div className='text-left w-full lg:w-1/2 lg:m-10 p-10'>
           <h1 className='text-2xl font-bold mb-4'>{productinfo.title}</h1>
           <p className='mb-2'>{productinfo.description}</p>
           <p className='mb-2'>Ratings</p>
