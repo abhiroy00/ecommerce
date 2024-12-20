@@ -58,29 +58,29 @@ export default function Navbar() {
               </p>
               {isDropdownOpen && (
   <div className="absolute top-10 left-0 w-48 bg-white shadow-lg rounded-md z-10">
-    <ul className="flex flex-col text-black p-2">
+    <ul className="flex flex-col text-black p-2 font-serif">
       <NavLink to="/my-orders">
-        <li className="flex items-center gap-2 hover:bg-gray-100 p-2">
+        <li className="flex items-center gap-2 hover:bg-gray-100 p-2  hover:font-bold">
           <LuShoppingBag /> My Orders
         </li>
       </NavLink>
       <NavLink to="/profile">
-        <li className="flex items-center gap-2 hover:bg-gray-100 p-2">
+        <li className="flex items-center gap-2 hover:bg-gray-100 p-2 hover:font-bold">
           <CgProfile /> Profile
         </li>
       </NavLink>
       <NavLink to="/gift-cards">
-        <li className="flex items-center gap-2 hover:bg-gray-100 p-2">
+        <li className="flex items-center gap-2 hover:bg-gray-100 p-2 hover:font-bold">
           <MdCardGiftcard /> Gift Cards
         </li>
       </NavLink>
       <NavLink to="/coupons">
-        <li className="flex items-center gap-2 hover:bg-gray-100 p-2">
+        <li className="flex items-center gap-2 hover:bg-gray-100 p-2 hover:font-bold">
           <RiCoupon2Line /> Coupons
         </li>
       </NavLink>
       <NavLink to="/notifications">
-        <li className="flex items-center gap-2 hover:bg-gray-100 p-2">
+        <li className="flex items-center gap-2 hover:bg-gray-100 p-2 hover:font-bold">
           <IoIosNotifications /> Notifications
         </li>
       </NavLink>
