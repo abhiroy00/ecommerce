@@ -5,6 +5,7 @@ import { MdAttachMoney } from "react-icons/md";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import { Link } from 'react-router-dom';
 import { IoIosArrowDroprightCircle,IoIosArrowDropleftCircle} from 'react-icons/io';
+import { useState,useEffect } from 'react';
 export default function Home() {
   const slides = [
     {
