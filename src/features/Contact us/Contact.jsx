@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div className="bg-gray-100 min-h-screen flex items-center justify-center p-10">
+    <div className="bg-gray-100 min-h-screen flex items-center justify-center p-10" style={{backgroundImage:"url('https://img.freepik.com/premium-vector/shopping-pattern-background-design_260839-17.jpg')"}}>
     <div className="container mx-auto flex items-center justify-center">
       <div className="bg-gray-800 rounded-lg shadow-lg p-8 max-w-xl w-full">
       <h1 className='text-[4vh] lg:text-5xl text-amber-400 text-center mb-4'><span className="text-white">Quick</span>Buy</h1>

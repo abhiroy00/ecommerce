@@ -2,7 +2,7 @@ import React from 'react'
 
     const AboutUs = () => {
       return (
-        <div className="min-h-screen bg-gray-50 p-8">
+        <div className="min-h-screen bg-gray-50 p-8" style={{backgroundImage:"url('https://img.freepik.com/premium-vector/shopping-pattern-background-design_260839-17.jpg')"}}>
           <div className="container mx-auto text-center">
             <h1 className="text-4xl font-bold mb-6">About Us!</h1>
             <p className="text-lg text-gray-700 mb-12">
