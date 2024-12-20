@@ -9,6 +9,10 @@ import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
 import AboutUs from './features/About/AboutUs'
 import Category from './features/Category/category'
 import Cart from './features/carts/Cart'
+import Page1 from './features/ShopWithUs/Page1'
+import Page2 from './features/ShopWithUs/Page2'
+import Page3 from './features/ShopWithUs/Page3'
+import MyOrders from './features/order/MyOrders'
 function App() {
   
   const router = createBrowserRouter([
@@ -49,6 +53,22 @@ function App() {
           path: "/cart/:id",
           element: <Cart/>
         },
+        {
+          path:"/page1",
+          element:<Page1></Page1>
+        },
+        {
+          path:"/page2",
+          element:<Page2></Page2>
+        },
+        {
+          path:"/page3",
+          element:<Page3></Page3>
+        },
+        {
+          path:"/my-orders",
+          element:<MyOrders></MyOrders>
+        }
        
         
 
