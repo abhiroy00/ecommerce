@@ -1,10 +1,42 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Image from '../assets/Image.png'
 import { PiTruck } from "react-icons/pi";
 import { MdAttachMoney } from "react-icons/md";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import { Link } from 'react-router-dom';
+import { IoIosArrowDroprightCircle,IoIosArrowDropleftCircle} from 'react-icons/io';
 export default function Home() {
+  const slides = [
+    {
+      url: 'https://t3.ftcdn.net/jpg/04/65/46/52/360_F_465465254_1pN9MGrA831idD6zIBL7q8rnZZpUCQTy.jpg'
+    },
+    {
+      url: 'https://img.freepik.com/free-vector/flat-horizontal-banner-template-black-friday-sale_23-2150852978.jpg?semt=ais_hybrid'
+    },
+    {
+      url: 'https://www.shutterstock.com/image-vector/ecommerce-web-banner-3d-smartphone-260nw-2069305328.jpg'
+    },
+    {
+      url: 'https://img.freepik.com/premium-psd/black-friday-sale-facebook-timeline-cover-web-banner-template_220443-238.jpg?semt=ais_hybrid'
+    }
+  ];
+  const [currentindex,setcurrentindex]= useState(0)
+  useEffect(() => { 
+    const interval = setInterval(() => { 
+      nextslide(); }, 5000); 
+      return () => clearInterval(interval); 
+  }, [currentindex]);
+  const prevslide = ()=> {
+    const isfirstslide = currentindex === 0;
+    const newIndex = isfirstslide ? slides.length - 1 : currentindex - 1;
+    setcurrentindex(newIndex);
+  }
+  const nextslide = ()=> {
+    const islastslide = currentindex === slides.length -1;
+    const newindex = islastslide ? 0 : currentindex + 1;
+    setcurrentindex(newindex)
+  }
+
   return (
     <div className='white w-screen h-auto' style={{animation:"changecolor 20s ease infinite"}}>
       <div className='flex justify-around'>
@@ -20,6 +52,12 @@ export default function Home() {
         <div className='w-1/2'>
           <img className='w-100% h-auto' src={Image} style={{position:"absolute",top:200,right:50,height:"600px"}}></img>
         </div>
+      </div>
+      <div>
+      <div style={{ backgroundImage: `url(${slides[currentindex].url})` }} className='flex w-[95vw] mt-10 h-[30vh] md:h-[75vh] mx-auto rounded-lg  bg-top  bg-contain duration-500 group'>
+        <div className='hidden group-hover:block relative font-bold left-[4%]  top-[50%] text-black/40' onClick={prevslide} ><IoIosArrowDropleftCircle size={50}/></div>
+        <div className='hidden group-hover:block relative font-bold right-[-90%] top-[50%] text-black/40' onClick={nextslide}><IoIosArrowDroprightCircle size={50}/></div>
+      </div>
       </div>
       <div >
         <h1 className=' text-[5vw] text-black flex justify-center  font-bold'>Why Shop With Us</h1>
