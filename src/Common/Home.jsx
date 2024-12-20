@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from '../assets/Image.png'
+import Image2 from '../assets/Image2.png'
 import { PiTruck } from "react-icons/pi";
 import { MdAttachMoney } from "react-icons/md";
 import { RiSecurePaymentLine } from "react-icons/ri";
@@ -15,10 +15,10 @@ export default function Home() {
             Discover top groceries , beauty, Fragrances,
             and Furniture items from Amaron.Enjoy great deals and excellent service, all in one place. Simplify your shopping
             experience with us.</p>
-          <button className='bg-amber-600 w-auto p-1 mt-5 h-auto text-white text-[2vw] rounded-md'>Shop Now</button>
+          <button className='bg-amber-600 w-auto p-2 mt-8 h-auto text-white text-[2vw] rounded-md hover:text-red-950'>Shop Now</button>
         </div>
         <div className='w-1/2'>
-          <img className='w-100% h-auto' src={Image} style={{position:"absolute",top:200,right:50,height:"600px"}}></img>
+          <img className='w-100% h-auto' src={Image2} style={{position:"absolute",top:250,right:80,height:"650px"}}></img>
         </div>
       </div>
       <div >
