@@ -36,7 +36,7 @@ const jeweleryProduct=product.filter(product=>product.category ==='jewelery')
     <div className="bg-white">
       <div className="mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
        
-        <h2 className="text-center text-3xl font-semibold">Jewelery Products</h2>
+        <h2 className="text-center text-3xl font-semibold">Men's Products</h2>
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
           {menProduct.map((value, index) => (
             <div key={index} className='mx-2 bg-gray-100 w-80 h-auto'>
