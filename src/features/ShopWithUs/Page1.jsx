@@ -23,7 +23,7 @@ const LandingPage = () => {
           </div>
           <div className="text-center">
            <Link to='/Product'> <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-8 rounded-full">Shop Now</button></Link>
-            <button className="bg-gray-700 hover:bg-gray-800 text-white font-bold py-4 px-8 rounded-full mt-4">Learn More</button>
+            <Link to='/About'><button className="bg-gray-700 hover:bg-gray-800 text-white font-bold py-4 px-8 rounded-full mt-4">About Us</button></Link>
           </div>
         </div>
       </div>
