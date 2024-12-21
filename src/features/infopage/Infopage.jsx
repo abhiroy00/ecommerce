@@ -57,9 +57,9 @@ const Infopage = () => {
           </span>
           <p className='mb-4'>MRP ${mrp}<br /> Inclusive of all taxes</p>
           <div className='flex justify-around mb-4'>
-            <div><PiTruck size={40} className='ml-9' />Cash On Delivery</div>
-            <div><MdAttachMoney size={40} className='ml-20' />30 day return & replacement</div>
-            <div><RiSecurePaymentLine size={40} className='ml-10' />Secure Payments</div>
+            <Link to={'/page1'}><div><PiTruck size={40} className='ml-9' />Cash On Delivery</div></Link>
+            <Link to={'/page2'}><div><MdAttachMoney size={40} className='ml-20' />30 day return & replacement</div></Link>
+            <Link to={'/page3'}><div><RiSecurePaymentLine size={40} className='ml-10' />Secure Payments</div></Link>
           </div>
           <p className='mb-2'>Product warranty</p>
           <p className='mb-2'>Shipping Information</p>

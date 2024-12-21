@@ -8,6 +8,7 @@ import { LuShoppingBag } from "react-icons/lu";
 import { MdCardGiftcard } from "react-icons/md";
 import { IoIosNotifications } from "react-icons/io";
 import { RiCoupon2Line } from "react-icons/ri";
+import Logo from '../assets/logo 12.png'
 
 
 export default function Navbar() {
@@ -20,7 +21,10 @@ export default function Navbar() {
   return (
     <div>
       <div className='bg-black w-screen h-[70px] flex justify-between'>
-        <h1 className='ml-28 text-4xl text-white mt-3'>Quick<span className='text-yellow-400'>Buy</span></h1>
+      <div className='flex ml-40'>
+      <img src={Logo} alt="" width={'100px'} />
+      <h1 className='mt-3 text-4xl text-white '>Quick<span className='text-yellow-400'>Buy</span></h1>
+      </div>
         <ul className='flex text-white mr-20 mt-5 gap-6 text-xl'>
           <NavLink to={"/"} className={({ isActive }) => isActive ? "text-yellow-400" : "text-white"}><li>Home</li></NavLink>
           <NavLink to={"/Product"} className={({ isActive }) => isActive ? "text-yellow-400" : "text-white"}><li>Products</li></NavLink>

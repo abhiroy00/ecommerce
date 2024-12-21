@@ -13,6 +13,8 @@ import Page1 from './features/ShopWithUs/Page1'
 import Page2 from './features/ShopWithUs/Page2'
 import Page3 from './features/ShopWithUs/Page3'
 import MyOrders from './features/order/MyOrders'
+import admin from './features/adminportal/admin'
+import Admin from './features/adminportal/admin'
 function App() {
   
   const router = createBrowserRouter([
@@ -48,6 +50,10 @@ function App() {
         {
           path: "/category",
           element: <Category/>
+        },
+        {
+          path: "/admin",
+          element: <Admin/>
         },
         {
           path: "/cart/:id",

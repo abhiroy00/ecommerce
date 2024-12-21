@@ -2,6 +2,7 @@ import React from 'react'
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 export default function Footer() {
   return (
     <div className='bg-black h-auto '>
@@ -16,12 +17,12 @@ export default function Footer() {
             <li className=' text-[1vh] lg:text-2xl inline text-zinc-400'>Facebook </li>
             <li className=' text-[1vh] lg:text-2xl text-zinc-400'>Twitter </li>
             <li className=' text-[1vh] lg:text-2xl text-zinc-400'>Instagram </li>
-            <li className='flex gap-1 text-zinc-400'><FaFacebook className='text-blue-700  text-[1vh] lg:text-2xl'/>
-              <FaTwitter className='text-blue-700  text-[1vh] lg:text-2xl' /> < FaInstagram  className=' text-blue-800  text-[1vh] lg:text-2xl' /></li>
+            <li className='flex gap-1 text-amber-400'><FaFacebook className=' text-[1vh] lg:text-2xl'/>
+              <FaTwitter className=' text-[1vh] lg:text-2xl' /> < FaInstagram  className=' text-[1vh] lg:text-2xl' /></li>
 
           </ul>
         </div>
-        <div className='mb-10'>
+        <Link to={'/admin'}><div className='mb-10'>
           <h4 className='text-[2vh] lg:text-3xl text-white text-center'>Make Money with Us</h4>
           <ul className='flex justify-center flex-col mt-5 items-center'>
             <li className=' text-[1vh] lg:text-2xl  text-zinc-400'>Sell on QuickBuy</li>
@@ -29,7 +30,7 @@ export default function Footer() {
             <li className=' text-[1vh] lg:text-2xl text-zinc-400'>Become an Affiliate</li>
             <li className=' text-[1vh] lg:text-2xl text-zinc-400'>Advertise Your Products</li>
           </ul>
-        </div>
+        </div></Link>
         <div className='mb-10'>
           <h4 className='text-[2vh] lg:text-3xl text-white text-center'>Let Us Help You</h4>
           <ul className='flex justify-center flex-col mt-5 items-center'>
