@@ -1,60 +1,43 @@
 import React, { useEffect, useState } from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-export default function Product(){
+export default function Product() {
 
-  const[product,setProduct]=useState([])
+  const [product, setProduct] = useState([])
 
-  useEffect(()=>{
-    async function getdata(){
-      const res=await fetch("http://localhost:3000/product")
-      const data=await res.json()
+  useEffect(() => {
+    async function getdata() {
+      const res = await fetch("http://localhost:3000/product")
+      const data = await res.json()
       setProduct(data)
       console.log(data);
     }
     getdata()
 
-  },[])
+  }, [])
 
   return (
-    <div style={{ animation: "changecolor 20s infinite", display: "flex", flexWrap: "wrap", gap: "5px" }}>
-      {product.map((value, index) => (
-        <div
-          key={index}
-          style={{
-            border: "1px solid #ccc",
-            borderRadius: "8px",
-            maxWidth: "20%",
-            height:"auto",
-            textAlign: "center",
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
-            backgroundColor: "#fff",
-            marginLeft:"20px",
-            alignItems:"center",
-            position:"relative",
-            top:20,
-            left:"7%",
-            gap:12,
-            marginBottom:40
-          }}
-        >
-        <Link to={`/infopage/${value.id}`}>
-          <img
-            src={value.image}
-            alt={value.name}
-            style={{ width: "90%", borderRadius: "8px", marginBottom: "2px" }}
-          ></img>  </Link>
+    <div className="bg-white">
+      <div className="mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
 
-          <h2 style={{ fontSize: "1.2em", margin: "8px 0" }}>{value.title}</h2>
-          <p style={{ fontSize: "1em", color: "#333", margin: "8px 0" }}>Price: ${value.price}</p>
-          <p style={{ fontSize: "1.2em", color: "#666", margin: "8px 0" }}>{value.category}</p> 
-         
-        </div> 
-        
-         
-      ))}
-      
+        <h2 className="text-center text-3xl font-semibold">Products!</h2>
+        <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+          {product.map((value, index) => (
+            <div key={index} className='mx-2 w-80 h-auto'>
+              <Link to={`/infopage/${value.id}`} >
+                <img src={value.image} alt="product-img" className='w-[100%] h-[60%] border border-black' />
+                <div className='px-2'>
+                  <h2 className='font font-semibold text-xl'>{value.title}</h2>
+                  <p>{value.description}</p>
+                  <div className='text-lg font-semibold'>{value.price} <p className='inline text-orange-400 font-medium'>({value.discount}% OFF)</p></div>
+                </div>
+              </Link>
+            </div>
+
+          ))}
+        </div>
+      </div>
     </div>
   );
-  
+
 }
