@@ -1,0 +1,65 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.py[cod]
+
+# Django
+*.log
+*.pot
+*.py~
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+
+# Virtualenv
+venv/
+.env/
+env/
+.venv/
+ENV/
+*.env
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Coverage reports
+.coverage
+.coverage.*
+*.cover
+nosetests.xml
+test-*.xml
+coverage.xml
+*.dat
+
+# mypy
+.mypy_cache/
+
+# Pytest
+.cache/
+
+# Pylint
+pylint-report.txt
+pylint-global.rc
+
+# Docker
+docker-compose.override.yml
+
+# Node.js (if you're using npm/yarn for frontend assets)
+node_modules/
+npm-debug.log
+yarn-error.log
