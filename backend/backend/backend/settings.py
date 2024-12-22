@@ -88,9 +88,9 @@ DATABASES = {
         				'NAME': 'quickbuy',          
        					'USER': 'quickbuy',           
         				'PASSWORD': 'quickbuy',     
-        			'HOST': 'localhost',          
-        'PORT': '3306',               
-    }
+        			    'HOST': 'localhost',          
+                        'PORT': '3306',               
+                }
 }
 
 # Password validation
