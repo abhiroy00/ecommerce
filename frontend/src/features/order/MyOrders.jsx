@@ -12,8 +12,8 @@ const MyOrders = () => {
   };
 
   return (
-    <div className="bg-gray-100">
-      <header className="bg-blue-500 text-white py-4 px-6">
+    <div className="bg-gray-100 min-h-screen">
+      <header className="bg-amber-400 text-black py-4 px-6">
         <h1 className="text-2xl font-bold">My Orders</h1>
       </header>
 
@@ -45,12 +45,17 @@ const MyOrders = () => {
                 </tr>
               </tbody>
             </table>
+            {/* Shop Again Button */}
+            <div className="mt-6">
+              <Link to="/shop">
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-72">
+                  Shop Again
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </main>
-      <footer className="bg-gray-200 text-center py-4">
-        <Link to="/Product" className="text-blue-500 hover:underline">Shop Again</Link>
-      </footer>
     </div>
   );
 };
