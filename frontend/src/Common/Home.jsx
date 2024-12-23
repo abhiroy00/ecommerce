@@ -49,7 +49,7 @@ export default function Home() {
       <div className='flex justify-around'>
         <div className='p-[10%] w-1/2'>
           <h1 className='text-5xl font-bold text-amber-600 animated-text'></h1>
-          <h1 className='text-black text-5xl font-bold'>
+          <h1 className='text-black text-5xl font-bold pt-10'>
             QuickBay: Where Speed Meets Savings!
           </h1>
           <p className='text-[2vw] text-gray-900 pt-10 font-bold font-cursive'>
@@ -60,7 +60,7 @@ export default function Home() {
           </button>
         </div>
         <div className='w-1/2 relative top-[250px] right-[80px]'>
-          <img className='w-full h-auto' src={Image2} style={{ height: '650px' }} alt="Product" />
+          <img className='w-full h-auto' src={Image2} style={{ height: '650px',position:"absolute",bottom:"390px",left:"50px"}} alt="Product" />
         </div>
       </div>
       <div className='w-screen h-[30vh] md:h-[60vh] py-10 group'>
