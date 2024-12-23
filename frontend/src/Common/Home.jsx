@@ -4,22 +4,26 @@ import { Link } from 'react-router-dom';
 import { PiTruck } from "react-icons/pi";
 import { MdAttachMoney } from "react-icons/md";
 import { RiSecurePaymentLine } from "react-icons/ri";
-import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from 'react-icons/io';
+import banner1 from '../assets/banner1.jpg'
+import banner2 from '../assets/banner2.jpg'
+import banner3 from '../assets/banner3.jpg'
+import banner4 from '../assets/banner4.jpg'
+import Category from '../features/Category/Category';
 
 export default function Home() {
   const slides = [
     {
-      url: 'https://t3.ftcdn.net/jpg/04/65/46/52/360_F_465465254_1pN9MGrA831idD6zIBL7q8rnZZpUCQTy.jpg'
+      url: banner1
     },
     {
-      url: 'https://img.freepik.com/free-vector/flat-horizontal-banner-template-black-friday-sale_23-2150852978.jpg?semt=ais_hybrid'
+      url: banner2
     },
     {
-      url: 'https://www.shutterstock.com/image-vector/ecommerce-web-banner-3d-smartphone-260nw-2069305328.jpg'
+      url: banner3
     },
     {
-      url: 'https://img.freepik.com/premium-psd/black-friday-sale-facebook-timeline-cover-web-banner-template_220443-238.jpg?semt=ais_hybrid'
+      url: banner4
     }
   ];
 
@@ -64,11 +68,11 @@ export default function Home() {
         </div>
       </div>
       <div className='w-screen h-[30vh] md:h-[60vh] py-10 group'>
-      <div style={{ backgroundImage: `url(${slides[currentindex].url})` }} className='flex w-[95vw] h-[30vh] md:h-[60vh] mx-auto rounded-lg bg-top bg-contain duration-500'></div>
-          <div className='hidden group-hover:block absolute top-[40%]  left-[5%] text-black/40  ' onClick={prevslide}>
+      <Link to={'/category'}><div style={{ backgroundImage: `url(${slides[currentindex].url})` }} className='flex w-[95vw] h-[30vh] md:h-[60vh] mx-auto rounded-lg bg-top bg-contain bg-no-repeat duration-500'></div></Link>
+          <div className='block absolute top-[160%]  left-[5%] text-white  ' onClick={prevslide}>
             <IoIosArrowDropleftCircle size={50} />
           </div>
-          <div className='hidden group-hover:block absolute top-[40%] left-[92%] text-black/40 ' onClick={nextslide}>
+          <div className='block absolute top-[160%] left-[92%] text-white' onClick={nextslide}>
             <IoIosArrowDroprightCircle size={50} />
           </div>
       </div>
@@ -124,6 +128,7 @@ export default function Home() {
           </Link>
         </div>
       </div>
+  <Category/>
     </div>
   );
 }
