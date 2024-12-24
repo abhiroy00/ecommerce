@@ -28,12 +28,12 @@ const Category = () => {
         <h2 className="text-left text-3xl font-semibold">Men's Products</h2>
         <div className="mt-6 flex overflow-x-auto space-x-6">
           {menProduct.map((value, index) => (
-            <div key={index} className=' w-80 h-auto flex-shrink-0'>
+            <div key={index} className=' w-52 h-auto flex-shrink-0'>
               <Link to={`/infopage/${value.id}`}>
               <img src={value.image} alt="product-img" className='w-[100%] h-[60%] border border-black' />
                 <div className='px-2'>
                   <h2 className='font font-semibold text-xl'>{value.title}</h2>
-                  <p>{value.description}</p>
+    
                   <div className='text-lg font-semibold'>{value.price} <p className='inline text-orange-400 font-medium'>({value.discount}% OFF)</p></div>
                 </div>
               </Link>              
