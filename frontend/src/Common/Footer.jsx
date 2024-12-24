@@ -3,10 +3,12 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
+import Logo from '../assets/logo 12.png'
 export default function Footer() {
   return (
     <div className='bg-black h-auto '>
-        <div className='text-center'>
+        <div className='text-center block'>
+          <img src={Logo} alt="" className='mx-auto w-[200px]'/>
           <h1 className='text-[4vh] lg:text-5xl text-amber-600 mb-5 '><span className="text-amber-400">Quick</span>Buy</h1>
         </div>
       <div className='flex justify-between lg:justify-around h-auto mb-0'>

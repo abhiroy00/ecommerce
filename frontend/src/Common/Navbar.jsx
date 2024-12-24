@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <div>
       <div className='bg-black w-screen h-[70px] flex justify-between'>
-      <div className='flex ml-40'>
+      <div className='flex ml-16'>
       <img src={Logo} alt="" width={'100px'} />
       <h1 className='mt-3 text-4xl text-white '>Quick<span className='text-yellow-400'>Buy</span></h1>
       </div>
