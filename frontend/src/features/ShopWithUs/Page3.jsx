@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const LandingPage = () => {
   return (
     <div className="bg-gray-800 text-gray-200 min-h-screen">
-      {/* Hero Section */}
+      
       <header className="bg-black text-gold py-24 px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-6xl font-bold mb-6 text-gold">Super Secure Payment System</h1>
@@ -12,7 +12,7 @@ const LandingPage = () => {
         </div>
       </header>
 
-      {/* Security Features Section */}
+      
       <section className="container mx-auto py-16 px-4">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-gray-700 text-gray-200 p-6 rounded-lg shadow-lg">
@@ -30,7 +30,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      
       <section className="bg-black py-16 px-4">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-bold text-gold mb-12">Customer Testimonials</h2>
@@ -51,7 +51,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      
       <section className="bg-gold py-16 px-4">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Secure Your Payments Today</h2>
@@ -64,7 +64,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Footer */}
+      
       <footer className="bg-gray-900 text-gray-400 py-6 text-center">
         <p>&copy; {new Date().getFullYear()} QuickBuy. All rights reserved.</p>
       </footer>
