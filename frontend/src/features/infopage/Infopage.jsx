@@ -10,19 +10,19 @@ import { Link } from 'react-router-dom';
 const Infopage = () => {
   const { id } = useParams();
   const [productinfo, setproductinfo] = useState(null);
-  
-  console.log("URL id:", id); 
+
+  console.log("URL id:", id);
 
   useEffect(() => {
     const fetchProduct = async () => {
       try {
         const res = await axios.get("http://localhost:3000/product");
         const data = res.data;
-        
-        console.log("Axios Response:", data); 
+
+        console.log("Axios Response:", data);
 
         const selectedProduct = data.find((product) => product.id === id);
-        console.log("Selected Product:", selectedProduct); 
+        console.log("Selected Product:", selectedProduct);
 
         if (selectedProduct) {
           setproductinfo(selectedProduct);
@@ -39,9 +39,9 @@ const Infopage = () => {
   if (!productinfo) {
     return <div>Loading or Product not found...</div>;
   }
-  const mrp = parseInt((productinfo.price)/(1-(productinfo.discount/100)))
+  const mrp = parseInt((productinfo.price) / (1 - (productinfo.discount / 100)))
   return (
-    <div className='m-0 p-0'>
+    <div className='m-0 p-0 max-w-screen'>
       <div className='block lg:flex min-w-screen'>
         <div className='w-full lg:w-1/2'>
           <img src={productinfo.image} alt="Product img" className='m-24 w-[60%] h-auto' />
@@ -57,9 +57,9 @@ const Infopage = () => {
           </span>
           <p className='mb-4'>MRP ${mrp}<br /> Inclusive of all taxes</p>
           <div className='flex justify-around mb-4'>
-            <Link to={'/page1'}><div><PiTruck size={40} className='ml-9' />Cash On Delivery</div></Link>
-            <Link to={'/page2'}><div><MdAttachMoney size={40} className='ml-20' />30 day return & replacement</div></Link>
-            <Link to={'/page3'}><div><RiSecurePaymentLine size={40} className='ml-10' />Secure Payments</div></Link>
+              <Link to={'/page1'}><div className='text-center'><PiTruck size={40} className='mx-auto' />Cash On Delivery</div></Link>
+              <Link to={'/page2'}><div className='text-center'><MdAttachMoney size={40} className='mx-auto' />30 day return & replacement</div></Link>
+              <Link to={'/page3'}><div className='text-center'><RiSecurePaymentLine size={40} className='mx-auto' />Secure Payments</div></Link>
           </div>
           <p className='mb-2'>Product warranty</p>
           <p className='mb-2'>Shipping Information</p>
@@ -68,16 +68,18 @@ const Infopage = () => {
             <label htmlFor="quantity" className="block text-lg font-medium">
               Quantity
             </label>
-            <input type="number" id="quantity" min="1" defaultValue={1} className="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
+            <input type="number" id="quantity" min="1" max={5} defaultValue={1} className="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
           </div>
-          <button className="bg-amber-400 text-black px-6 py-3 rounded-lg mr-10 hover:bg-amber-500 transition duration-300">
+          <div className='flex justify-around w-[300px]'>
+          <button className="bg-amber-400 text-black px-6 py-3 rounded-lg hover:bg-amber-500 transition duration-300">
             Buy Now
           </button>
-          <Link to={`/cart/${productinfo.id}`}> 
-          <button className="bg-amber-400 text-black px-6 py-3 rounded-lg mr-10 hover:bg-amber-500 transition duration-300">
-            Add To Cart
-          </button>
+          <Link to={`/cart/${productinfo.id}`}>
+            <button className="bg-amber-400 text-black px-6 py-3 rounded-lg hover:bg-amber-500 transition duration-300">
+              Add To Cart
+            </button>
           </Link>
+          </div>
         </div>
       </div>
       <div className="py-8">
