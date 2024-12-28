@@ -39,3 +39,7 @@ secret_key.txt
 # OS files
 .DS_Store
 Thumbs.db
+
+
+#envirement
+.env

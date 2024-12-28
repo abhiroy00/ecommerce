@@ -8,9 +8,11 @@ export default function Product() {
   useEffect(() => {
     async function getdata() {
       const res = await fetch("http://127.0.0.1:8000/api/product/")
-      const data = await res.json()
-      setProduct(data)
-      console.log(data);
+      const product = await res.json()
+      setProduct(product.data)
+      console.log(product.data);
+      
+   
     }
     getdata()
 
