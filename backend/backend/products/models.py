@@ -7,7 +7,7 @@ class Product(models.Model):
     discount = models.IntegerField()
     description = models.TextField()
     category = models.CharField(max_length=255)
-    image = models.URLField()
+    image = models.ImageField(upload_to='product_images/')
 
 
 

@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'contacts',
     'authorisation',
-    'products'
+    'products',
+    "corsheaders"
 ]
 
 MIDDLEWARE = [
@@ -50,6 +51,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -85,14 +88,14 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 
 DATABASES = {
-    			'default': {
-        				'ENGINE': 'django.db.backends.mysql',
-        				'NAME': 'quickbuy',          
-       					'USER': 'quickbuy',           
-        				'PASSWORD': 'quickbuy',     
-        			    'HOST': 'localhost',          
-                        'PORT': '3306',               
-                }
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'quickbuy',
+        'USER': 'quickbuy',
+        'PASSWORD': 'quickbuy',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
 }
 
 # Password validation

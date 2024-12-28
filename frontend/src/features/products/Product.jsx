@@ -7,7 +7,7 @@ export default function Product() {
 
   useEffect(() => {
     async function getdata() {
-      const res = await fetch("http://localhost:3000/product")
+      const res = await fetch("http://127.0.0.1:8000/api/product/")
       const data = await res.json()
       setProduct(data)
       console.log(data);
