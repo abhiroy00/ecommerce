@@ -43,12 +43,12 @@ export default function Home() {
   return (
     <div className='max-w-screen h-auto animate-[changecolor_20s_ease_infinite] z-0'>
       <div className='flex'>
-        <div className='m-5 lg:p-[10%] w-1/2'>
-          <h1 className='text-2xl lg:text-5xl font-bold text-amber-600 animated-text'></h1>
-          <h1 className='text-black text-lg lg:text-5xl font-bold lg:pt-10'>
+        <div className='m-5 lg:p-[10%] w-1/2 p-[5%]'>
+          <h1 className='text-[4vw] lg:text-5xl font-bold text-amber-600 animated-text'></h1>
+          <h1 className='text-black text-[3vw] lg:text-5xl font-bold lg:pt-10'>
             QuickBay: Where Speed Meets Savings!
           </h1>
-          <p className='text-sm lg:text-4xl text-gray-900 lg:pt-10 font-semibold font-cursive'>
+          <p className='text-[3vw] lg:text-4xl text-gray-900 lg:pt-10 font-semibold font-cursive'>
             Discover top groceries, beauty, Fragrances, and Furniture items from Amaron. Enjoy great deals and excellent service, all in one place. Simplify your shopping experience with us.
           </p>
           <button className='bg-amber-600 w-auto p-2 mt-8 h-auto text-white text-[2vw] rounded-md hover:text-red-950'>

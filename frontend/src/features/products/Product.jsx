@@ -25,9 +25,9 @@ export default function Product() {
         <h2 className="text-center text-3xl font-semibold">Products!</h2>
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
           {product.map((value, index) => (
-            <div key={index} className='mx-2 w-80 h-auto'>
+            <div key={index} className='lg:w-72 md:w-52 w-40 lg:h-auto '>
               <Link to={`/infopage/${value.id}`} >
-                <img src={value.image} alt="product-img" className='w-[100%] h-[60%] border border-black' />
+                <img src={value.image} alt="product-img" className='w-[100%] h-[60%] ' />
                 <div className='px-2'>
                   <h2 className='font font-semibold text-xl'>{value.title}</h2>
                   <p>{value.description}</p>
