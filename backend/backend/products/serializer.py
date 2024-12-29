@@ -6,13 +6,10 @@ class ProductSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Product
-        fields = '__all__'
+        fields = ['id', 'title', 'price', 'discount', 'description', 'category', 'image', 'image_url']
 
     def get_image_url(self, obj):
-        """
-        Method to build the full URL for the image field.
-        """
         request = self.context.get('request')  # Get the request object from context
-        if obj.image:
-            return request.build_absolute_uri(obj.image.url)  # Build the absolute URL for the image
+        if request and obj.image:
+            return request.build_absolute_uri(obj.image.url)
         return None
