@@ -14,6 +14,8 @@ import Page2 from './features/ShopWithUs/Page2'
 import Page3 from './features/ShopWithUs/Page3'
 import MyOrders from './features/order/MyOrders'
 import Admin from './features/adminportal/admin'
+import RegisterForm from './features/register/Register'
+import LoginPage from './features/login/Login'
 function App() {
   
   const router = createBrowserRouter([
@@ -73,17 +75,17 @@ function App() {
         {
           path:"/my-orders",
           element:<MyOrders></MyOrders>
+        },
+        {
+          path:"/register",
+          element:<RegisterForm></RegisterForm>
+        },
+        {
+          path:"/login",
+          element:<LoginPage></LoginPage>
         }
-       
-        
-
-    
       ]
-     
-      
     }
-    
-
   ])
 
   return (
