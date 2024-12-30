@@ -21,21 +21,51 @@ const RegisterForm = () => {
 
   const validateForm = () => {
     const newErrors = {};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;  // Basic email validation regex
     if (!formData.email) {
       newErrors.email = 'This field is required.';
+    } else if (!emailRegex.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address.';
     }
     if (!formData.password) {
       newErrors.password = 'This field is required.';
+    } else if (formData.password.length < 6) {
+      newErrors.password = 'Password must be at least 6 characters long.';
     }
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm()) {
-      // Simulate successful form submission
-      console.log('Form submitted successfully:', formData);
+      try {
+        const response = await fetch('http://127.0.0.1:8000/api/register/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+        const data = await response.json();
+        
+        if (response.ok) {
+          // Handle success, e.g., redirect to login or show success message
+          console.log('Form submitted successfully:', formdata);
+        } else {
+          // Handle backend errors (e.g., email already taken)
+          setErrors(data.errors || {});
+        }
+      } catch (error) {
+        // Handle fetch errors (e.g., network issues)
+        setErrors({ general: 'Something went wrong. Please try again later.' });
+      } finally {
+        // Clear the form fields
+        setFormData({
+          email: '',
+          password: '',
+        });
+      }
     }
   };
 
