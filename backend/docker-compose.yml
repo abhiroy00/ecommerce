@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: quickbuy
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./backend:/app   # Maps the `backend` folder to `/app` inside the container
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql://quickbuy_owner:8gYlcZ7toump@ep-little-hill-a5ilbpth.us-east-2.aws.neon.tech/quickbuy?sslmode=require
+
+  db:
+    image: postgres:13
+    container_name: quickbuy_db
+    environment:
+      POSTGRES_USER: quickbuy_owner
+      POSTGRES_PASSWORD: 8gYlcZ7toump
+      POSTGRES_DB: quickbuy
+    restart: always
