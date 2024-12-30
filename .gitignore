@@ -25,3 +25,4 @@ Thumbs.db
 # Sass/LESS cache
 .sass-cache/
 *.less
+/backend/backend/authorisation/migrations
