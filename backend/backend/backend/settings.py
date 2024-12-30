@@ -125,7 +125,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL  = 'authorisation.User'
 
-EMAIL_FROM = "QuickBuy"
+EMAIL_FROM = f"QuickBuy <{os.getenv('EMAIL_HOST_USER')}>"
+ORG_NAME = "QuickBuy"
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
