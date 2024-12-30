@@ -19,10 +19,16 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevent default form submission behavior
-    axios.post("http://localhost:3000/contactus",contactus)
+    axios.post("http://127.0.0.1:8000/api/contactus/",contactus)
     .then(res => {
       console.log(res);
       alert('Message sent successfully');
+      // Clear the form fields after successful submission
+      setcontactus({
+        name: '',
+        email: '',
+        message: ''
+      });
     }).catch((err)=>{
       console.log(err);
       
