@@ -170,3 +170,37 @@ def reset_password(request):
         })
     except Exception as e:
         return handle_error(e)
+
+@api_view(['POST'])
+def login(request):
+    try:
+        data = request.data
+        email = data.get('email') 
+        password = data.get('password')
+
+        # Check if both email and password are provided
+        if not email or not password:
+            return Response({
+                'status': 400,
+                'message': 'Email and password are required',
+                'data': {'email': email, 'password': password},
+            })
+
+        user = authenticate(email=email, password=password)
+        if user:
+            # Generate JWT token
+            refresh = RefreshToken.for_user(user)
+            access_token = str(refresh.access_token)
+            return Response({
+                'status': 200,
+                'message': 'Logged in successfully',
+                'data': {'Bearer token': access_token}
+            })
+
+        # Invalid credentials
+        return Response({
+            'status': 400,
+            'message': 'Invalid Credentials',
+        })
+    except Exception as e:
+        return handle_error(e)
