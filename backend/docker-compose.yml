@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.9'
 
 services:
   web:
@@ -13,6 +13,8 @@ services:
       - db
     environment:
       DATABASE_URL: postgresql://quickbuy_owner:8gYlcZ7toump@ep-little-hill-a5ilbpth.us-east-2.aws.neon.tech/quickbuy?sslmode=require
+      EMAIL_HOST_USER : "koreapolice100@gmail.com"
+      EMAIL_HOST_PASSWORD : "dbmv jrqk rxgc gxse"
 
   db:
     image: postgres:13
