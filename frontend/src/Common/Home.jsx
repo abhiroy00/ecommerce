@@ -51,9 +51,11 @@ export default function Home() {
           <p className='text-[3vw] lg:text-4xl text-gray-900 lg:pt-10 font-semibold font-cursive'>
             Discover top groceries, beauty, Fragrances, and Furniture items from Amaron. Enjoy great deals and excellent service, all in one place. Simplify your shopping experience with us.
           </p>
+          <Link to={'/Product'}>
           <button className='bg-amber-600 w-auto p-2 mt-8 h-auto text-white text-[2vw] rounded-md hover:text-red-950'>
             Shop Now
           </button>
+          </Link>
         </div>
         <div className='w-1/2 h-auto lg:float-right pt-[12%]'>
           <img className='w-[100%] max-w-[500px] h-auto mx-auto' src={Image2} alt="Product" />
